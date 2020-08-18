@@ -1,0 +1,18 @@
+extends _include/layout
+
+block title
+  title Archive | #{config.title}
+
+block content
+  main#archive
+    h1#archive--title Archive
+    #archive--posts
+      for post in page.posts.toArray()
+        section.post
+          a.post--content--link-wrapper(href=url_for(post.path)): h2.post--content--title= post.title
+
+  hr#archive--hr
+
+block pagination
+  #archive--pagination
+    include _include/paginator

@@ -1,0 +1,21 @@
+extends _include/layout
+
+block title
+  title= config.title
+
+block content
+  main#index
+    #index--posts
+      for post in page.posts.toArray()
+          section.post
+            a.post--content--link-wrapper(href=url_for(post.path)): h2.post--content--title= post.title
+            if post.tags
+              ul.post--tags
+                for tag in post.tags.toArray()
+                  li.post--tags--tag: a.tag--link(href=url_for(tag.path))= tag.name
+
+  hr#index--hr
+
+block pagination
+  #index--pagination
+    include _include/paginator

@@ -1,0 +1,17 @@
+extends _include/layout
+
+block title
+  title #{page.tag} | #{config.title}
+
+block content
+  main#content--tag-page
+    h1#tag-page--title Tag: #{page.tag}
+    .posts
+      for post in page.posts.toArray()
+        section.post
+          a.post--content--link-wrapper(href=url_for(post.path)): h2.post--content--title= post.title
+  hr#tag-page--hr
+
+block pagination
+  #tag-page--pagination
+    include _include/paginator

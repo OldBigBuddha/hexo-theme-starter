@@ -1,0 +1,20 @@
+extends _include/layout
+
+block title
+  title= `${page.title} | ${config.title}`
+
+block content
+  main#content
+    article#content--post
+      h1.post--title= page.title
+      #post--date= page.date.format(config.date_format)
+
+      hr#post--top-hr
+
+      section!= page.content
+
+      hr#post--bottom-hr
+
+block pagination
+  #post--pagination
+    include _include/paginator

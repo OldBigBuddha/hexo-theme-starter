@@ -1,0 +1,19 @@
+if page.prev || page.next
+  #paginator
+    if is_post()
+      if page.next
+        #older
+          a(href=url_for(page.next_link || page.next.path)) #{page.next.title} >
+
+      if page.prev
+        #newer
+          a(href=url_for(page.prev_link || page.prev.path)) < #{page.prev.title}
+
+    else
+      if page.next
+        #older
+          a(href=url_for(page.next_link || page.next.path)) 次へ >
+
+      if page.prev
+        #newer
+          a(href=url_for(page.prev_link || page.prev.path)) < 前へ

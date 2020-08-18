@@ -1,0 +1,15 @@
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  meta(name="format-detection", content="telephone=no")
+
+  if (config.description)
+    meta(name="description", content=config.description)
+  if (config.author)
+    meta(name="author", content=config.author)
+
+  block title
+
+  if (theme.favicon)
+    link(rel="shortcut icon", type="image/x-icon", href=theme.favicon)
