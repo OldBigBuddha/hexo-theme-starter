@@ -4,14 +4,18 @@ block title
   title Archive | #{config.title}
 
 block content
-  main#archive
-    h1#archive--title Archive
+  main
+    header#article--header
+      h1#archive--header--title Archive
+
+    hr#archive--top-hr
+
     #archive--posts
       for post in page.posts.toArray()
-        section.post
+        article.post
           a.post--content--link-wrapper(href=url_for(post.path)): h2.post--content--title= post.title
 
-  hr#archive--hr
+    hr#archive--bottom-hr
 
 block pagination
   #archive--pagination

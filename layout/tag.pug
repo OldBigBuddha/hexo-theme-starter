@@ -4,13 +4,18 @@ block title
   title #{page.tag} | #{config.title}
 
 block content
-  main#content--tag-page
-    h1#tag-page--title Tag: #{page.tag}
-    .posts
+  main
+    header#tag-page--header
+      h1#tag-page--header--title Tag: #{page.tag}
+
+    hr#tag-page--top-hr
+
+    #tag-page--posts.posts
       for post in page.posts.toArray()
-        section.post
+        article.post
           a.post--content--link-wrapper(href=url_for(post.path)): h2.post--content--title= post.title
-  hr#tag-page--hr
+
+    hr#tag-page--bottom-hr
 
 block pagination
   #tag-page--pagination
