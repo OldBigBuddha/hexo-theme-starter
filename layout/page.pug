@@ -1,0 +1,18 @@
+
+extends _include/layout
+
+block title
+  title= `${page.title} | ${config.title}`
+
+block content
+  main
+    article
+      header#page--header
+        h1.page--header--title= page.title
+        #page--header--date= page.date.format(config.date_format)
+
+      hr#page--top-hr
+
+      #page--content!= page.content
+
+      hr#page--bottom-hr
