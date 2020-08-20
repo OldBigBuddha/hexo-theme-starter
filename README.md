@@ -12,8 +12,10 @@ I'll make a manual for using this template.
 
 - index
 - post
+- page
 - archive
 - tag page
+- category page
 - pagination
 
 ## 対応言語（Supported languages）
