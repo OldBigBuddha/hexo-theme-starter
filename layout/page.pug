@@ -7,12 +7,12 @@ block title
 block content
   main
     article
-      header#page--header
-        h1.page--header--title= page.title
-        #page--header--date= page.date.format(config.date_format)
+      header
+        h1= page.title
+        span= page.date.format(config.date_format)
 
-      hr#page--top-hr
+      hr
 
-      #page--content!= page.content
+      div!= page.content
 
-      hr#page--bottom-hr
+      hr

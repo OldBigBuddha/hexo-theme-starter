@@ -6,16 +6,15 @@ block title
 block content
   main
     article
-      header#post--header
-        h1#post--header--title= page.title
-        #post--header--date= page.date.format(config.date_format)
+      header
+        h1= page.title
+        span= page.date.format(config.date_format)
 
-      hr#post--top-hr
+      hr
 
-      #post--content!= page.content
+      div!= page.content
 
-      hr#post--bottom-hr
+      hr
 
 block pagination
-  #post--pagination
-    include _include/paginator
+  include _include/paginator

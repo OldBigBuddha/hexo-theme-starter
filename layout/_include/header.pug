@@ -1,6 +1,5 @@
 header
   a(href=url_for("/"))
-  #site__title
-    p.title: a(href=url_for("/"))= config.title
-    if config.subtitle
-      p.subtitle= config.subtitle
+    div= config.title
+    if theme.subtitle
+      p= theme.subtitle
