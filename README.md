@@ -1,12 +1,8 @@
 # hexo-theme-starter
 
-Hexo のテーマを作るための雛形です。CSS は一切含まれていません。
+Pug で Hexo のテーマを作るための雛形です。CSS は一切含まれていません。
 
-This is a template for making theme of Hexo. There is no StyleSheet(like CSS, Sass and Stylus).
-
-後日マニュアルを作成するつもりです。
-
-I'll make a manual for using this template.
+This is a template for making theme of Hexo with Pug. There is no StyleSheet(like CSS, Sass and Stylus).
 
 ## 実装済みのレイアウト（Implemented Layout）
 
@@ -17,14 +13,6 @@ I'll make a manual for using this template.
 - tag page
 - category page
 - pagination
-
-## 対応言語（Supported languages）
-
-- pug
-
-## 対応予定言語（Will support languages）
-
-- ejs
 
 ## LICENSE
 
